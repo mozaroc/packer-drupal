@@ -48,7 +48,7 @@
       "ssh_username": "root",
       "ssh_wait_timeout": "10000s",
       "type": "qemu",
-      "vm_name": "druapl-7.37-x86_64"
+      "vm_name": "drupal-7.37-x86_64"
     }
   ],
   "provisioners": [
