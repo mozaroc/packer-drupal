@@ -72,6 +72,8 @@ done
 
 juju deploy --repository=/root/charms/ local:trusty/drupal --to 0 --debug
 
+juju add-relation mysql drupal
+
 for s in drupal ; do # haproxy; do
     while true; do
         juju status $s/0 --format=json | jq ".services.$s.units" | grep -q '"agent-state": "started"' && break
@@ -80,7 +82,7 @@ for s in drupal ; do # haproxy; do
     done
 done
 
-juju add-relation mysql drupal
+
 
 for s in mysql drupal ; do # haproxy; do
     while true; do
