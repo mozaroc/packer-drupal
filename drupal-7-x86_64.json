@@ -25,7 +25,7 @@
       ],
       "boot_wait": "5s",
       "disk_interface": "scsi",
-      "disk_size": 10000,
+      "disk_size": 5000,
       "disk_cache": "unsafe",
       "disk_discard": "unmap",
       "format": "raw",
@@ -75,7 +75,8 @@
         "type": "compress",
         "format": "bgzf",
         "output": "output/drupal-7-x86_64-compress/",
-        "only": ["qemu"]
+        "only": ["qemu"],
+        "metadata":true
       },
       {
         "type": "checksum",
